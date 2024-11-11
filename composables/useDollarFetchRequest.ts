@@ -49,7 +49,7 @@ function createDollarFetchRequest(method: HttpMethod) {
     data?: any,
     options: RequestOptions = {}
   ) {
-    const baseURL = import.meta.env.PROD ? import.meta.env.VITE_API_BASE_URL : '/useApi' 
+    const baseURL = import.meta.env.PROD ? import.meta.env.VITE_APP_BASE_API : '/useApi' 
     const requestUrl = baseURL + url
     try {
       handleRequest(options);

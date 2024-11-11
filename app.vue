@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import "animate.css"
 const nuxtApp = useNuxtApp()
 
 // 是否首次加載
@@ -27,13 +28,10 @@ nuxtApp.hook('page:finish', () => {
 
 <style>
 /* 過度動畫 */
-.page-enter-active,
-.page-leave-active {
-  transition: all 0.4s;
+.page-enter-active {
+  animation: fadeIn ease-in 0.3s;
 }
-.page-enter-from,
-.page-leave-to {
-  opacity: 0;
-  filter: blur(1rem);
+.page-leave-active {
+  animation: fadeOut ease-out 0.3s;
 }
 </style>

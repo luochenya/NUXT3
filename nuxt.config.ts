@@ -29,22 +29,6 @@ export default defineNuxtConfig({
   devServer: {
     port: 7777 // 端口號
   },
-  build: {
-    // 排除正式環境中的 robots.txt 文件
-    extend (config: any) {
-      if (process.env.VITE_ENV_TYPE === 'prod') {
-        const robotsPath = resolve(__dirname, 'public', 'robots.txt')
-        const index = config.module.rules.findIndex(
-          rule => rule.test && rule.test.test('.txt')
-        )
-
-        if (index > -1) {
-          config.module.rules[index].exclude.push(robotsPath)
-          console.log('Excluding robots.txt from production build.')
-        }
-      }
-    }
-  },
   css:[
     '~/assets/styles/index.scss'
   ],

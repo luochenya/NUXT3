@@ -26,6 +26,8 @@ const userStore = useUserStore()
 const { name, age, sex } = storeToRefs(userStore)
 console.log(name.value, age.value, sex.value)
 
+// 動畫
+const animateShow = ref(false)
 
 onMounted(() => {
   getData()
@@ -86,6 +88,17 @@ useHead({
         <img v-lazy="imgUrl" />
       </SwiperSlide>
     </Swiper>
+
+    <el-button @click="animateShow = !animateShow">切換動畫</el-button>
+    <transition
+      name="fade"
+      appear
+      enter-active-class="animate__animated animate__bounceInDown"
+      leave-active-class="animate__animated animate__bounceOut"
+      appear-active-class="animate__animated animate__bounceInDown"
+    >
+      <div v-show="animateShow">123</div>
+    </transition>
   </div>
 </template>
 
