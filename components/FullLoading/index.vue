@@ -9,6 +9,19 @@
   </div>
 </template>
 <style lang="scss" scoped>
+$color: black;
+$size: 100px;
+$borderWidth: 4px;
+$totalTime: 1.5s;
+$redWidth: 27%;
+$orangeHeight: 50%;
+$whiteWidth: 23%;
+$backgroundColor1: white;
+$backgroundColor2: #F3B93F;
+$backgroundColor3: #EA5664;
+$backgroundColor4: orange;
+$backgroundColor5: red;
+
 div.loader {
   position: fixed;
   top: 0;
@@ -28,14 +41,6 @@ div.loader {
     font-size: 16px;
   }
 }
-
-$color: black;
-$size: 100px;
-$borderWidth: 4px;
-$totalTime: 1.5s;
-$redWidth: 27%;
-$orangeHeight: 50%;
-$whiteWidth: 23%;
 
 div.logo {
   width: $size;
@@ -77,7 +82,7 @@ div.logo {
     bottom: 0;
     right: 0;
     width: 0;
-    animation: white $totalTime infinite;
+    animation: $backgroundColor1 $totalTime infinite;
     animation-direction: alternate;
   }
   div.orange {
@@ -86,8 +91,8 @@ div.logo {
     bottom: 0;
     right: 0;
     height: 0;
-    background-color: #F3B93F;
-    animation: orange $totalTime infinite;
+    background-color: $backgroundColor2;
+    animation: $backgroundColor4 $totalTime infinite;
     animation-direction: alternate;
   }
   div.red {
@@ -96,8 +101,8 @@ div.logo {
     bottom: 0;
     left: 0;
     width: 0;
-    background-color: #EA5664;
-    animation: red $totalTime infinite;
+    background-color: $backgroundColor3;
+    animation: $backgroundColor5 $totalTime infinite;
     animation-direction: alternate;
   }
 }

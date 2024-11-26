@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import "animate.css"
+// 拿取APP的配置
+const appConfig = useAppConfig()
 const nuxtApp = useNuxtApp()
 
 // 是否首次加載
@@ -17,7 +19,7 @@ nuxtApp.hook('page:finish', () => {
 <template>
   <div>
     <!-- 首屏加載動畫 -->
-    <FullLoading v-if="isFullLoading" />
+    <FullLoading v-if="isFullLoading && appConfig.IS_FULL_LOADING" />
     <NuxtLayout>
       <!-- 進度條 color顏色 height高度 -->
       <NuxtLoadingIndicator />

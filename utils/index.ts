@@ -32,3 +32,21 @@ export function handleThousands (value: any) {
     }
   }
 }
+
+/**
+ * 禁用滾動條 禁用頁面滾動
+ */
+export function handleStopScroll () {
+  var mo = function (e) { e.preventDefault() }
+  document.body.style.overflow = 'hidden'
+  document.addEventListener("touchmove", mo, false)
+}
+
+/**
+ * 恢復禁用滾動條 恢復禁用頁面滾動
+ */
+export function handleCanScroll () {
+  var mo = function (e) { e.preventDefault() }
+  document.body.style.overflow = ''
+  document.removeEventListener("touchmove", mo, false)
+}

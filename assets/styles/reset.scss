@@ -2,3 +2,30 @@ body, html {
   margin: 0;
   padding: 0;
 }
+
+* {
+  box-sizing: border-box;
+}
+
+@media screen and (min-width: 968px) {
+  /* 整體滾動條 */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  /* 滾動條鬼刀 */
+  ::-webkit-scrollbar-track {
+    background-color: #ffffff;
+    border-radius: 6px;
+  }
+  /* 滾動條滑塊 */
+  ::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 6px;
+    border: 2px solid #f1f1f1;
+  }
+  /* 滾動條滑塊 - 懸停 */
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+  }
+}

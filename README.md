@@ -29,7 +29,7 @@ $ npm run build:prod
 │   ├── images 圖片
 │   └── styles 公用樣式
 │       ├── index.scss 樣式文件主入口
-│       ├── mixin.scss 樣式函數
+│       ├── mixins.scss 樣式函數
 │       ├── reset.scss 樣式重置
 │       ├── transition.scss 樣式動畫
 │       └── variables.scss 樣式變量
@@ -57,6 +57,8 @@ $ npm run build:prod
 ├── node_modules 項目依賴包
 ├── pages 文件路由 對應頁面
 ├── plugins 註冊的插件
+│   ├── vue-lazyload.ts 自定義指令 圖片懶加載
+│   └── aos.client.ts aos.js屏幕滾動動畫
 ├── public 不經過處理的靜態資源
 │   ├── favicon.ico 網頁tag上面的小ico圖標
 │   └── robots.txt 測試環境防google爬蟲抓取（正式機忽略該文件）

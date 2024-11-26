@@ -1,9 +1,9 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
-  devtools: {
-    enabled: true
-  },
+  // devtools: {
+  //   enabled: true
+  // },
   app: {
     // 設置全局的過度動畫 也可單獨設置
     pageTransition: { name: 'page', mode: 'out-in' },

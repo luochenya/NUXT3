@@ -1,14 +1,14 @@
 <script setup lang="ts">
-// 拿取APP的配置
-const appConfig = useAppConfig()
 
-onMounted(() => {
-  console.log(appConfig.theme.primaryColor)
-})
 </script>
 
 <template>
   <div>
-    <nuxt-link to="/demo">前往demo</nuxt-link>
+    <div>
+      <nuxt-link to="/demo">前往demo</nuxt-link>
+    </div>
+    <div>
+      <nuxt-link to="/aos">前往aos</nuxt-link>
+    </div>
   </div>
 </template>
